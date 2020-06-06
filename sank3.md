@@ -27,7 +27,7 @@ But still not the flag yet
 
 I went to the file and download it
 
-the file contains the following python code
+The file contains the following python code
 
 ```
 import requests
@@ -49,15 +49,18 @@ import requests
 req = requests.post("http://ec2-18-184-241-234.eu-central-1.compute.amazonaws.com/snak3/", headers={"content-type":"application/x-www-form-urlencoded", "Auth":"084e0343a0486ff05530df6c705c8bb4"}, data={"flag":"true"})
 ```
 
-I used the python in interactive mode simply by writing `python3` in terminal to give me more comfort
+I used the python in interactive mode simply by writing `python3` in terminal to give me more flexibility
 
 so I imported the requests module `import requests` and entered the second part of the code
 
-I wrote `req.content.decode()` to see the response 
+`req = requests.post("http://ec2-18-184-241-234.eu-central-1.compute.amazonaws.com/snak3/", headers={"content-type":"application/x-www-form-urlencoded", "Auth":"084e0343a0486ff05530df6c705c8bb4"}, data={"flag":"true"})
+`
 
-**And finally the response was !!!**
+And entered `req.content.decode()` to see the response
 
-The same page containing **the snake around you somewhere** :\
+## And finally the response was !!!
+
+The same page containing `**the snake around you somewhere**` :\
 
 So there's another trick
 
@@ -68,15 +71,15 @@ At first moment I thought it might be a trick with the logic of flag parameter s
 
 I thought it may be something with Auth header
 
-this is probably to be MD5 hash
+This is probably an MD5 hash
 
 I checked it with hash-identifier tool and it confirmed that it is MD5
 
 so I went to crack it in some rainbow table site
 
-it the hash cracked successfully! :D
+It the hash cracked successfully! :D
 
-the value of the hash was *guest*
+The value of the hash was *guest*
 
 
 
@@ -86,10 +89,8 @@ so I hashed the word *admin* with MD5 and it was `21232f297a57a5a743894a0e4a801f
 
 I substituted the new hash with the old one and send the request again
 
-**And Bingo!!**
+## And Bingo!!
 
-the response was:
-
-`FLAG{ReqUest_heaDers_&_PyThon}the snake around you somewhere`
+the response was: `FLAG{ReqUest_heaDers_&_PyThon}the snake around you somewhere`
 
 And I got the flag :D
