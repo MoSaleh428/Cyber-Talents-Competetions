@@ -8,4 +8,4 @@ So I hope it will be a good one and useful as possible
 
 I'll try to share with you how I thought and efforts I did in every step in the chellanges I solved myself
 
-Hope you benefit and I'll leave you with the writeups
+Hope you benefit from it
