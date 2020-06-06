@@ -23,11 +23,11 @@ Directly went there and found it has one dissalowed path `/index.py`
 
 Here I found the snake :D
 
-But still not the flag yet
+But still early to celebrate .. I've to find the flag
 
-I went to the file and download it
+I download the file
 
-The file contains the following python code
+The file contained the following python code
 
 ```
 import requests
@@ -35,9 +35,9 @@ import requests
 req = requests.post("http://thwebsite/path/", headers={"content-type":"application/x-www-form-urlenc", "Auth":"084e0343a0486ff05530df6c705c8bb4"}, data={"flag":"true"})
 ```
 
-Ok this code seems to need a little modification to fit our needs
+Ok.. this code seems to need a little modification to fit our needs
 
-First I changed the url to the chellange url
+First I changed the url to the chellange url `http://ec2-18-184-241-234.eu-central-1.compute.amazonaws.com/snak3/`
 
 And second the content type missing some letters, it should be `application/x-www-form-urlencoded` .. the last 4 letters were missing (oded)
 
@@ -49,47 +49,47 @@ import requests
 req = requests.post("http://ec2-18-184-241-234.eu-central-1.compute.amazonaws.com/snak3/", headers={"content-type":"application/x-www-form-urlencoded", "Auth":"084e0343a0486ff05530df6c705c8bb4"}, data={"flag":"true"})
 ```
 
-I used the python in interactive mode simply by writing `python3` in terminal to give me more flexibility
+I used the python in interactive mode by writing `python3` in terminal to give me more flexibility
 
-so I imported the requests module `import requests` and entered the second part of the code
+I imported the requests module `import requests` and entered the second part of the code
 
 `req = requests.post("http://ec2-18-184-241-234.eu-central-1.compute.amazonaws.com/snak3/", headers={"content-type":"application/x-www-form-urlencoded", "Auth":"084e0343a0486ff05530df6c705c8bb4"}, data={"flag":"true"})
 `
 
 And entered `req.content.decode()` to see the response
 
-## And finally the response was !!!
+### And finally the response was !!!
 
-The same page containing `**the snake around you somewhere**` :\
+The same page containing `the snake around you somewhere` :\
 
-So there's another trick
+There's something still missing
 
 
 
 At first moment I thought it might be a trick with the logic of flag parameter so I changed it to flase `data={"flag":"flase"}` and tried to send the request without the parameter but still the same
 
 
-I thought it may be something with Auth header
+I thought it may be something with **Auth** header
 
 This is probably an MD5 hash
 
 I checked it with hash-identifier tool and it confirmed that it is MD5
 
-so I went to crack it in some rainbow table site
+So I went to crack it in some rainbow table site
 
 It the hash cracked successfully! :D
 
-The value of the hash was *guest*
+The value of the hash was **guest**
 
 
 
-So it came on my mind like .. why dont I change it with *admin* ?
+So it came on my mind like.. why dont I change it with **admin** ?
 
-so I hashed the word *admin* with MD5 and it was `21232f297a57a5a743894a0e4a801fc3`
+I hashed the word **admin** with MD5 and it was `21232f297a57a5a743894a0e4a801fc3`
 
 I substituted the new hash with the old one and send the request again
 
-## And Bingo!!
+### And Bingo!!
 
 the response was: `FLAG{ReqUest_heaDers_&_PyThon}the snake around you somewhere`
 
