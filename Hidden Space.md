@@ -2,13 +2,13 @@ I wasn't used to fronesics chellanges when I tried this one
 
 But I decided to give it a try and I solved it :D
 
-it was very fun experience
+It was very fun experience
 
-so let's begin :D
+So let's begin :D
 
-the first thing you see in the chellange is the discription which says `NASA website has been hacked but no defacement found after attack. can you see any suspicious things?` and a .pcap file with it
+The first thing you see in the chellange is the discription which says `NASA website has been hacked but no defacement found after attack. can you see any suspicious things?` and a .pcap file with it
 
-![image 1](https://imgur.com/D4Czq0Y)
+![image 1](https://imgur.com/D4Czq0Y.png)
 
 I downloaded the pcap file and used tcpdump from the terminal to take a look inside with command `sudo tcpdump -r Hidden+Space.pcap`
 
@@ -36,9 +36,7 @@ So I looked for a POST request in case the attacker found some form he can explo
 
 ![image 5](https://imgur.com/PfPqoVM.png)
 
-I tried to look if any directory replied with `200 Found` status with command `sudo tcpdump -r Hidden+space.pcap | grep "1.1 200"`
-
-and I found only 1 response with status 200
+I tried to look if any directory replied with `200 Found` status with command `sudo tcpdump -r Hidden+space.pcap | grep "1.1 200"`, And I found only 1 response with status 200
 ![image 6](https://imgur.com/MIUkUlb.png)
 
 I filtered again with time stamp to see the request sent before it, as it was sent in time 23:33:09.552984 I aproximated it to tenth part second `sudo tcpdump -r Hidden+Space.pcap | grep "23:33:09.55"`
@@ -67,7 +65,9 @@ At this moment I was really confused, WTH would this encryption be if it's not B
 I kept thinking too much till I was about to give up when this idea raise on my mind like `why don't I try to encrypt each line alone with base64 again, I may find something..`
 
 So, I gave it a try, and I found two things:
+
 1- the encryption was for an image that's why it gave me a bad encryption
+
 2- the flag !
 ![image 11](https://imgur.com/4UDGdke.png)
 
