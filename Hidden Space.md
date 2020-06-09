@@ -68,7 +68,7 @@ So, I gave it a try, and I found two things:
 
 1- the encryption was for an image that's why it gave me a bad encryption
 
-2- the flag !
+2- the flag ! `flag{f0r3ns!cs_!n_5pac3}`
 ![image 11](https://imgur.com/4UDGdke.png)
 
 And solved :D
