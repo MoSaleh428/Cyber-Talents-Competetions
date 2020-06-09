@@ -4,9 +4,7 @@ This one was a web chellange
 
 The first thing you see is the link to [the chellange](http://ec2-18-184-241-234.eu-central-1.compute.amazonaws.com/snak3/) with a phrase **understand the snake**
 
-![picture 1](https://imgur.com/zLLvjIu)
-
-
+![picture 1](https://imgur.com/zLLvjIu.png)
 
 I set my Burp Suite scope to the chellange link
 
@@ -14,12 +12,13 @@ And lets get into the chellange link
 
 I saw see a blank page written in it **the snake around you somewhere**
 
-I didn't give attention to what is written and started directory bruteforce with my burp and a few moments i saw a robots.txt file
+![image 2](https://imgur.com/zA1pWLu.png)
+
+I didn't give attention to what is written (at least till I feel I'm stuck I may consider looking for hints) and started directory bruteforce with my burp and a few moments i saw a robots.txt file
 
 Directly went there and found it has one dissalowed path `/index.py`
 
-![picture 3](https://imgur.com/Nbxq7V7)
-
+![image 3](https://imgur.com/Nbxq7V7.png)
 
 Here I found the snake :D
 
@@ -64,10 +63,7 @@ The same page containing `the snake around you somewhere` :\
 
 There's something still missing
 
-
-
 At first moment I thought it might be a trick with the logic of flag parameter so I changed it to flase `data={"flag":"flase"}` and tried to send the request without the parameter but still the same
-
 
 I thought it may be something with **Auth** header
 
@@ -81,9 +77,7 @@ It the hash cracked successfully! :D
 
 The value of the hash was **guest**
 
-
-
-So it came on my mind like.. why dont I change it with **admin** ?
+So I thought of why dont I change it with **admin** ?
 
 I hashed the word **admin** with MD5 and it was `21232f297a57a5a743894a0e4a801fc3`
 
@@ -92,5 +86,7 @@ I substituted the new hash with the old one and send the request again
 ### And Bingo!!
 
 the response was: `FLAG{ReqUest_heaDers_&_PyThon}the snake around you somewhere`
+
+![image 4](https://imgur.com/V1BGi8T.png)
 
 And I got the flag :D
