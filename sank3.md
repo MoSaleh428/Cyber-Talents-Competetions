@@ -1,4 +1,4 @@
-So lets begin :D
+So lets begin :)
 
 This one was a web chellange
 
