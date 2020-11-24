@@ -234,13 +234,13 @@ And I got the flag :)
 
 When I entered the page it contained a blog with index page contains image with word DEMO shaking in it
 
-![https://i.imgur.com/KhHVMqF.png](image 1)
+![image 1](https://i.imgur.com/KhHVMqF.png)
 
 The blog had 4 pages (Home, About, Services, Contact)
 
 Navigating into them nothing was interested in the content.. but the url was interesting
 
-![https://i.imgur.com/EzR82qA.png](image 2)
+![image 2](https://i.imgur.com/EzR82qA.png)
 
 The url contained a get parameter named after the blog page like `?file=about`
 
@@ -248,7 +248,7 @@ It seems like it reads the file from somewhere.. That's propably LFI
 
 I tried to read index.php page and I found the php source code
 
-![https://i.imgur.com/hHU79a9.png](image 3)
+![image 3](https://i.imgur.com/hHU79a9.png)
 
 ```
 <?php
@@ -273,17 +273,17 @@ But's clear now that it reads the file using `file_get_contents()` function
 
 But it validates the input using preg_match with regex in it and if it matcs.. it kicks you out
 
-![https://i.imgur.com/0QkW8yp.png](image 4)
+![image 4](https://i.imgur.com/0QkW8yp.png)
 
 I got notice of it doesn't check the letters case when it checks for file wrapper
 
 So I bypassed it by changing it to File:// instead of file://
 
-![https://i.imgur.com/jC6YBUU.png](image 5)
+![image 5](https://i.imgur.com/jC6YBUU.png)
 
 I searched for the flag in most common places it could be and found it in File://home/flag
 
-![https://i.imgur.com/Q90bs3L.png](image 6)
+![image 6](https://i.imgur.com/Q90bs3L.png)
 
 And I got the flag :)
 
@@ -292,13 +292,13 @@ And I got the flag :)
 
 The web page looked like a profile with picture, name, description and last active time and some other things
 
-![https://i.imgur.com/b5pePMu.png](image 1)
+![image 1](https://i.imgur.com/b5pePMu.png)
 
 When I first opened the web page I noticed that it loaded then refreshed again.. that's wierd
 
 I checked the the burp suite to find that it set 3 cookies then refreshed again to load the profile information from it
 
-![https://i.imgur.com/XwhZbVM.png](image 2)
+![image 2](https://i.imgur.com/XwhZbVM.png)
 
 The 3 cookies are (profile_id, _user_session, profile_info)
 
@@ -314,7 +314,7 @@ It's php serialized object
 
 Firstly I changed the boolean value of UserisAdmin to 1 but it only changed the description and the picture, nothing else..
 
-![https://i.imgur.com/QuzMhp0.png](image 3)
+![image 3](https://i.imgur.com/QuzMhp0.png)
 
 I was thinking about php insecure deserialization but unfortunately I didn't have source code to do so
 
@@ -328,11 +328,11 @@ I changed its value to `1605975420;echo hello;` , also I changed the length valu
 
 And it worked
 
-![https://i.imgur.com/qPUIQsB.png](image 4) 
+![image 4](https://i.imgur.com/qPUIQsB.png) 
 
 Now let's execute more interesting command like `1605975420;cat /etc/passwd/;` , again changed the length again, encode and send
 
-![https://i.imgur.com/JdL92Ef.png](image 5)
+![image 5](https://i.imgur.com/JdL92Ef.png)
 
 And I got the flag in it :)
 
@@ -342,7 +342,7 @@ And I got the flag in it :)
 
 Going into the link directly I found this page
 
-![https://i.imgur.com/v2t24W8.png](image 1)
+![image 1](https://i.imgur.com/v2t24W8.png)
 
 
 So it's website for some wine company with many pages in it
@@ -351,31 +351,31 @@ I ran directory brute force using dirsearch tool and navigated into the pages wi
 
 After I made sure all the pages requested along with the robots.txt I found in directory brute force
 
-![https://i.imgur.com/30N6V31.png](image 2)
+![image 2](https://i.imgur.com/30N6V31.png)
 
-![https://i.imgur.com/pkJnNmO.png](image 3)
+![image 3](https://i.imgur.com/pkJnNmO.png)
 
 I noticed something in the requests.. most of the pages had no cookies and suddenly at the end I got a cookie
 
-![https://i.imgur.com/6gLFSSL.png](image 4)
+![image 4](https://i.imgur.com/6gLFSSL.png)
 
 I returned to burp proxy http requests to see when did I get it and found it was set when I navigated policy.php page
 
-![https://i.imgur.com/BIb0ZrS.png](image 5)
+![image 5](https://i.imgur.com/BIb0ZrS.png)
 
 I made two requests.. one with the file name in the cookie and the other without the cookie and sent them to burp comparer to see the difference
 
-![https://i.imgur.com/jzLdOvK.png](image 6)
+![image 6](https://i.imgur.com/jzLdOvK.png)
 
 Ok I'm sure now it's reading something and know where it's displayed, let's try something more interesting by setting the cookie value to /etc/passwd
 
-![https://i.imgur.com/Le9Qyhr.png](image 7)
+![image 7](https://i.imgur.com/Le9Qyhr.png)
 
 And I got the content of it :)
 
 I know previously from robots.txt content that the flag is in /etc/flag_48cbe4247cc8f7937ff091f257b4e160.txt .. so let's get it
 
-![https://i.imgur.com/JRQ1n9E.png](image 8)
+![image 8](https://i.imgur.com/JRQ1n9E.png)
 
 bruh.. I hit WAF
 
@@ -391,7 +391,7 @@ but.. unfortunately I couldn't read this file
 
 So I tried the second method which is reading the /var/log/apache2/access.log .. the apache server logs .. and it'll just do the same
 
-![https://i.imgur.com/bAVahKE.png](image 9)
+![image 9](https://i.imgur.com/bAVahKE.png)
 
 And I got the flag
 
