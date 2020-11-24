@@ -10,19 +10,22 @@ So let's begin :)
 
 
 
-##icoan (100pts): [https://n33rdz.github.io/Blog/Egypt-National-CTF-2020-Cybertalents/](https://n33rdz.github.io/Blog/Egypt-National-CTF-2020-Cybertalents/)
+## icoan (100pts):
+[https://n33rdz.github.io/Blog/Egypt-National-CTF-2020-Cybertalents/](https://n33rdz.github.io/Blog/Egypt-National-CTF-2020-Cybertalents/)
 
 
 
-##R3cova (100pts): [https://medium.com/sud0root/ctf-writeups-sudan-national-ctf-2020-web-challenges-writeups-5b3d183e93c3](https://medium.com/sud0root/ctf-writeups-sudan-national-ctf-2020-web-challenges-writeups-5b3d183e93c3) 
+## R3cova (100pts):
+[https://medium.com/sud0root/ctf-writeups-sudan-national-ctf-2020-web-challenges-writeups-5b3d183e93c3](https://medium.com/sud0root/ctf-writeups-sudan-national-ctf-2020-web-challenges-writeups-5b3d183e93c3) 
 
 
 
-##r34lity(200pts): [https://ouahabs.github.io/2020/cybertalents-algeria-quals-2020-writeup/](https://ouahabs.github.io/2020/cybertalents-algeria-quals-2020-writeup/)
+## r34lity(200pts):
+[https://ouahabs.github.io/2020/cybertalents-algeria-quals-2020-writeup/](https://ouahabs.github.io/2020/cybertalents-algeria-quals-2020-writeup/)
 
 
 
-##Bean (50pts):
+## Bean (50pts):
 
 I opened the page to find a picture of Mr. Bean in the index page.. nothing else
 
@@ -50,7 +53,7 @@ Now I can navigate anywhere in the server.. so I went too /file../home/flag.txt 
 
 
 
-##Upgrade (50 pts):
+## Upgrade (50 pts):
 
 The web page had an upload functionality and saying that there's system upgrade and it asks me to upload source file
 
@@ -85,7 +88,8 @@ Uploading the zip file
 Challenge solved..
 
 
-##Notebook (100pts):
+
+## Notebook (100pts):
 
 The web page had a file upload functionality to upload a note and a place to print some info about the uploaded note
 
@@ -143,7 +147,7 @@ BOOM, I got the flag :)
 
 
 
-##Limited (100pts):
+## Limited (100pts):
 
 I entered the web page to find a text `Do you think you can get in?!` with input field and a button named pwn, well.. lets see if I can
 
@@ -226,7 +230,7 @@ So replaced the empty double single quotes in the payload with 1
 And I got the flag :)
 
 
-##Home Blog (100pts):
+## Home Blog (100pts):
 
 When I entered the page it contained a blog with index page contains image with word DEMO shaking in it
 
@@ -284,7 +288,7 @@ I searched for the flag in most common places it could be and found it in File:/
 And I got the flag :)
 
 
-###Echo Tango Sierra (100pts):
+## Echo Tango Sierra (100pts):
 
 The web page looked like a profile with picture, name, description and last active time and some other things
 
@@ -334,7 +338,7 @@ And I got the flag in it :)
 
 
 
-##Mr. Agent (200pts):
+## Mr. Agent (200pts):
 
 Going into the link directly I found this page
 
