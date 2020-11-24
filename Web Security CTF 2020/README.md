@@ -1,6 +1,6 @@
 This is write up for web security CTF organized by cybertalents in 19 November 2020
 
-I achieved 8th in the CTF with solving all the challenges
+I achieved the 8th in the CTF with solving all the challenges
 
 Some of the challenges in the CTF was repeated in previous challenges so there's no point in repeating them again so I'll just mention the previous write ups for them
 
