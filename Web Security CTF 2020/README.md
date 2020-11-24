@@ -79,11 +79,11 @@ I searched a lot on how to put link file in zip file *because it wouldn't do thi
 
 So I made a link from source file to /home/flag and zipped it
 
-![https://i.imgur.com/jyMiyz7.png](image04)
+![image 4](https://i.imgur.com/jyMiyz7.png)
 
 Uploading the zip file
 
-![https://i.imgur.com/PmzALtG.png](image05)
+![image 5](https://i.imgur.com/PmzALtG.png)
 
 Challenge solved..
 
@@ -93,15 +93,15 @@ Challenge solved..
 
 The web page had a file upload functionality to upload a note and a place to print some info about the uploaded note
 
-![https://i.imgur.com/w0KgtOZ.png](image01)
+![image 1](https://i.imgur.com/w0KgtOZ.png)
 
 It also contained a sample file to download and see how the uploaded file should be
 
-![https://i.imgur.com/xuBop2d.png](image02)
+![image 2](https://i.imgur.com/xuBop2d.png)
 
 Uploading the sample file to see how it's printed
 
-![https://i.imgur.com/5F3bahY.png](image03)
+![image 3](https://i.imgur.com/5F3bahY.png)
 
 And I got (Title, sub, Description) info of the sample file, The title value was `DocX!`
 
@@ -113,35 +113,35 @@ The docx is actually a zip file that contain some xml files
 
 So to exploit this.. I unziped the docx file and tried to search for which file contained the `DocX!` string, and I found it in docProps/core.xml
 
-![https://i.imgur.com/eszcWa8.png](image12)
+![image 4](https://i.imgur.com/eszcWa8.png)
 
 I opened the file with text editor and injected xxe payload in it `<!DOCTYPE bruh [<!ENTITY bruh SYSTEM "file:///etc/passwd">]>`
 
 And called the entity `&bruh;` in title field
 
-![https://i.imgur.com/nB44CKH.png](image06)
+![image 5](https://i.imgur.com/nB44CKH.png)
 
 Returning the modified core.xml file to the sample.docx
 
-![https://i.imgur.com/rL3kXzs.png](image07)
+![image 6](https://i.imgur.com/rL3kXzs.png)
 
 And upload again
 
-![https://i.imgur.com/DcPmOIc.png](image08)
+![image 7](https://i.imgur.com/DcPmOIc.png)
 
 I can read the files now :)
 
 A hint was given in the challenge description that the flag is in home directory 
 
-![https://i.imgur.com/pkcoQAx.png](image09)
+![image 8](https://i.imgur.com/pkcoQAx.png)
 
 So I changed the core.xml file to read in the payload from `file:///etc/passwd` to `file:///home/flag` and repeated the previous steps again
 
-![https://i.imgur.com/gjVO9AB.png](image10)
+![image 9](https://i.imgur.com/gjVO9AB.png)
 
 And uploaded the docx file
 
-![https://i.imgur.com/O0FQkgp.png](image11)
+![image 10](https://i.imgur.com/O0FQkgp.png)
 
 BOOM, I got the flag :)
 
@@ -151,15 +151,15 @@ BOOM, I got the flag :)
 
 I entered the web page to find a text `Do you think you can get in?!` with input field and a button named pwn, well.. lets see if I can
 
-![https://i.imgur.com/OiGn7rY.png](image01)
+![image 1](https://i.imgur.com/OiGn7rY.png)
 
 I checked the source of the page to find hidden anchor tag contains src.txt 
 
-![https://i.imgur.com/v2mocC8.png](image02)
+![image 2](https://i.imgur.com/v2mocC8.png)
 
 I went there and found the source code
 
-![https://i.imgur.com/hUNfgQf.png](image03)
+![image 3](https://i.imgur.com/hUNfgQf.png)
 
 All the past was the easy part.. the coming is the trouble
 
@@ -179,11 +179,11 @@ Enough of analyzing the code and let's try to exploit it
 
 I made local database to try the payloads locally and see the outputs with fake flag
 
-![https://i.imgur.com/sKmopY5.png](image04)
+![image 4](https://i.imgur.com/sKmopY5.png)
 
 It works.. now let's see what happens if I put empty string `''` as input
 
-![https://i.imgur.com/RvydAIc.png](image05)
+![image 5](https://i.imgur.com/RvydAIc.png)
 
 This returns nothing..
 
@@ -195,7 +195,7 @@ I didn't know which mode to use there are many.. So i returned to read the sourc
 
 I tried it locally and it worked
 
-![https://i.imgur.com/25aayQp.png](image06)
+![image 6](https://i.imgur.com/25aayQp.png)
 
 So That is what I need
 
@@ -203,15 +203,15 @@ But since it's blacklisted I need alternative for it
 
 Little search.. many alternatives, I choosed the shortest one to not exceed the length limit.. which is `ansi`
 
-![https://i.imgur.com/7rFwhV9.png](image14)
+![image 7](https://i.imgur.com/7rFwhV9.png)
 
 It works too, So let's try to simulate the server side query
 
-![https://i.imgur.com/sovpKq4.png](image12)
+![image 8](https://i.imgur.com/sovpKq4.png)
 
 Everything seems to bee fine now.. lets send the payload
 
-![https://i.imgur.com/p9vznfF.png](image09)
+![image 9](https://i.imgur.com/p9vznfF.png)
 
 But the server had other opinion :(
 
@@ -219,13 +219,13 @@ It doesn't trigger any of the errors in the code neither replies with the query 
 
 I thought it is because of some non-disclosed restriction for the single quotes so I tried to inject some simple payload that prints hello
 
-![https://i.imgur.com/43Q3Qu9.png](image08)
+![image 10](https://i.imgur.com/43Q3Qu9.png)
 
 It's clear now I can't print strings, but it's not a problem.. I can print numbers :)
 
 So replaced the empty double single quotes in the payload with 1
 
-![https://i.imgur.com/tEBojuX.png](image10)
+![image 11](https://i.imgur.com/tEBojuX.png)
 
 And I got the flag :)
 
