@@ -400,3 +400,56 @@ I didn't inject the payload in user agent so I think someone already injected th
 Or the challenge was just to read the logs file considering it enough to pass it
 
 Either of them.. it worked
+
+
+
+## RCE ME (50pts):
+This was easy challenge. the challenge was added in the 2nd day of the CTF.
+When I opened the url, I found this login page.
+![image1](https://www.up-00.com/i/00197/fypxijf608x4.png) 
+
+After making some directory brute force using dirsearch tool, I found robots.txt file .
+In this file I found path called **/guest/guest**.
+I tired to get this path ,but it wasn't valid path so, I got another idea what if these are the credentials that I need to login? 
+
+So, I tried to login as guest in username and password.
+WOW It worked !!! 
+But this was what I got.
+![image2](https://www.up-00.com/i/00197/oqi1l962lna2.png)
+
+here I was stucked in this page for some time.
+my last hope was to get some file or path to move on in this challenge so, I made another brute force and I get this path **/profile/source.php**.
+![image3](https://www.up-00.com/i/00197/09tfbmbn6twh.png)
+This was the source file with the path of the flag.
+I saved the source file and run it locally to test it easily.
+The code showed that the file is vulnerable by **RCE** in the **name** parameter ,but the file put some filtters to prevent payloads to work on it. 
+I tried to solve it using several payloads and finally I got the right payload.
+This was the right payload **('%0A ccatat /etc/passwd %0A)** and showed to me the **passwd** file clearly.
+![image4](https://www.up-00.com/i/00197/bttvwv3snfoe.png)
+
+Then I tried to get the flag file using this payload **('%0A ccatat /etc/flag.txt %0A)** ,but it didn't work.
+So, I edited it be **('%0A ccatat /etc/fllaag.txt %0A)** and I got the flag as shown.
+![image5](https://www.up-00.com/i/00197/u9ivov2kocbz.png)
+
+
+## Readable (100pts):
+
+This was the last challegne. the challenge was added in the last day of the CTF.
+
+The challenge was just white page with search button.
+![image1](https://www.up-00.com/i/00197/58ymdbecpj7p.png)
+
+So, It seemed that the challege was SQL Injection Challenge.
+I checked the **robots.txt** file after brute forcing and I found this path **(/etc/flag.txt)**.
+so I thought that from the SQL Injection , I will get Local File Inclusion **(LFI)** to read this file.
+I tried some usuall payloads and I found that challenge was Blind SQL Injection so, I decided to run **SQLMAP** tool on it.
+This was the command I used with SQLMAP >> **(sqlmap -u "http://18.185.102.18/readable/?proId=as" --dbs --level 3 --risk 3 --batch)**.
+WOW I was right , it was Blind SQL Injection.
+![image2](https://www12.0zz0.com/2020/11/24/21/223135403.png)
+
+Then I modified the payload to check if I was able to get the /etc/passwd file and I got this.
+![image3](https://www.up-00.com/i/00197/b7vbml9d3c25.png)
+
+So, I modified the payload to get the flag and I got it.
+![image4](https://www.up-00.com/i/00197/zl4b9v21fwig.png)
+
