@@ -29,27 +29,27 @@ So let's begin :)
 
 I opened the page to find a picture of Mr. Bean in the index page.. nothing else
 
-![https://i.imgur.com/yQmJgxS.png](image 1)
+![image 1](https://i.imgur.com/yQmJgxS.png)
 
 As there's nothing in the page itself nor in its source code I ran directory brute force using dirsearch tool
 
 The brute force found a directory named /files/ .. I navigated into it to find that it contains the files of /etc/ directory in linux
 
-![https://i.imgur.com/tkjTLhS.png](image 2)
+![image 2](https://i.imgur.com/tkjTLhS.png)
 
 Nothing was interesting in the directory itself.. and I got stuck on what to do here
 
 Until I noticed that the server running the website is Nginx, which is known for the Nginx alias traversal vulnerability
 
-![https://i.imgur.com/ORrYbSe.png](image 5)
+![image 3](https://i.imgur.com/ORrYbSe.png)
 
 I navigated into /files../ to find if the vulnerability exists and it was :)
 
-![https://i.imgur.com/uuO0uGx.png](image 3)
+![image 4](https://i.imgur.com/uuO0uGx.png)
 
 Now I can navigate anywhere in the server.. so I went too /file../home/flag.txt and got the flag
 
-![https://i.imgur.com/7J6n03r.png](image 4)
+![image 5](https://i.imgur.com/7J6n03r.png)
 
 
 
@@ -57,17 +57,17 @@ Now I can navigate anywhere in the server.. so I went too /file../home/flag.txt 
 
 The web page had an upload functionality and saying that there's system upgrade and it asks me to upload source file
 
-![https://i.imgur.com/h3hOSIM.png](image01)
+![image 1](https://i.imgur.com/h3hOSIM.png)
 
 I made a file named source and zipping it in a file named file.zip and uploaded it
 
-![https://i.imgur.com/VnrHzJI.png](image02)
+![image 2](https://i.imgur.com/VnrHzJI.png)
 
 The site has revealed me some files and it ran cat command to read the source file content
 
 I went to see what's in the robots.txt file and I found the location of the flag
 
-![https://i.imgur.com/NQDbb8q.png](image03)
+![image 3](https://i.imgur.com/NQDbb8q.png)
 
 I thought of many things like uploading something other than zip file or injecting os command payload in source file name but none worked
 
