@@ -330,11 +330,11 @@ And it worked
 
 ![image 4](https://i.imgur.com/qPUIQsB.png) 
 
-Now let's execute more interesting command like `1605975420;cat /etc/passwd/;` , again changed the length again, encode and send
+Now let's execute more interesting command like `1605975420;cat /etc/passwd/;` , again changed the length, encode and send
 
 ![image 5](https://i.imgur.com/JdL92Ef.png)
 
-And I got the flag in it :)
+And I got the flag :)
 
 
 
