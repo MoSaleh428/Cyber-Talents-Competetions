@@ -2,7 +2,7 @@ This is write up for web security CTF organized by cybertalents in 19 November 2
 
 I achieved the 8th in the CTF with solving all the challenges
 
-Some of the challenges in the CTF was repeated in previous challenges so there's no point in repeating them again so I'll just mention the previous write ups for them
+Some of the challenges in the CTF was repeated in previous competitions so there's no point in repeating them again so I'll just mention the previous write ups for them
 
 My friend Abanob Medhat Contributed with writing RCE Me and readable write ups so credits goes to him
 
