@@ -281,7 +281,7 @@ So I bypassed it by changing it to File:// instead of file://
 
 ![image 5](https://i.imgur.com/jC6YBUU.png)
 
-I searched for the flag in most common places it could be and found it in File://home/flag
+I searched for the flag in most common places it could be and found it in File:///home/flag
 
 ![image 6](https://i.imgur.com/Q90bs3L.png)
 
