@@ -33,7 +33,7 @@ I opened the page to find a picture of Mr. Bean in the index page.. nothing else
 
 As there's nothing in the page itself nor in its source code I ran directory brute force using dirsearch tool
 
-The brute force found a directory named /files/ .. I navigated into it to find that it contains the files of /etc/ directory in linux
+The brute force found a directory named /files/ ،I navigated into it to find that it contains the files of /etc/ directory in linux
 
 ![image 2](https://i.imgur.com/tkjTLhS.png)
 
