@@ -269,7 +269,7 @@ I tried to read index.php page and I found the php source code
 ?>
 ```
 
-But's clear now that it reads the file using `file_get_contents()` function
+It's clear now that it reads the file using `file_get_contents()` function
 
 But it validates the input using preg_match with regex in it and if it matcs.. it kicks you out
 
