@@ -363,7 +363,7 @@ I returned to burp proxy http requests to see when did I get it and found it was
 
 ![image 5](https://i.imgur.com/BIb0ZrS.png)
 
-I made two requests.. one with the file name in the cookie and the other without the cookie and sent them to burp comparer to see the difference
+I made two requests to policy.php .. one with the file name in the cookie and the other without the cookie and sent them to burp comparer to see the difference
 
 ![image 6](https://i.imgur.com/jzLdOvK.png)
 
@@ -373,7 +373,7 @@ Ok I'm sure now it's reading something and know where it's displayed, let's try 
 
 And I got the content of it :)
 
-I know previously from robots.txt content that the flag is in /etc/flag_48cbe4247cc8f7937ff091f257b4e160.txt .. so let's get it
+I knew previously from robots.txt content that the flag is in /etc/flag_48cbe4247cc8f7937ff091f257b4e160.txt .. so let's get it
 
 ![image 8](https://i.imgur.com/JRQ1n9E.png)
 
@@ -389,7 +389,7 @@ Once it read the php code stored in the file it'll execute it
 
 but.. unfortunately I couldn't read this file
 
-So I tried the second method which is reading the /var/log/apache2/access.log .. the apache server logs .. and it'll just do the same
+So I tried the second method which is reading the /var/log/apache2/access.log .. the apache2 server logs .. and it'll just do the same
 
 ![image 9](https://i.imgur.com/bAVahKE.png)
 
