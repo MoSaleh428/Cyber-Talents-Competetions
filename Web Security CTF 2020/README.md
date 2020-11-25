@@ -439,7 +439,7 @@ This was the last challegne. the challenge was added in the last day of the CTF.
 The challenge was just white page with search button.
 ![image1](https://www.up-00.com/i/00197/58ymdbecpj7p.png)
 
-So, It seemed that the challege was SQL Injection Challenge.
+So, It seemed that the challenge was SQL Injection Challenge.
 I checked the **robots.txt** file after brute forcing and I found this path **(/etc/flag.txt)**.
 so I thought that from the SQL Injection , I will get Local File Inclusion **(LFI)** to read this file.
 I tried some usuall payloads and I found that challenge was Blind SQL Injection so, I decided to run **SQLMAP** tool on it.
