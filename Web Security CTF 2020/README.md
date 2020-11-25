@@ -324,7 +324,7 @@ I thought it's php code injection, but it wasn't
 
 It was OS command injection worked
 
-I changed its value to `1605975420;echo hello;` , also I changed the length value *which is the length of the parameter value string* from 22 to not get server error, encoded it and send again
+I changed its value to `1605975420;echo hello;` , also I changed the length value *which is the length of the parameter value string* from 11 to 22 to not get server error, encoded the new php serialized object and send again
 
 And it worked
 
