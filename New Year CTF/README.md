@@ -4,7 +4,8 @@ Team Members:
 - Abanob Medhat
 - Mohammed Saleh
 - Hussein EL Sayed
-this CTF competition was held on 24th Dec 2020 by Cybertalents.
+
+This CTF competition was held on 24th Dec 2020 by Cybertalents.
 It was good competition, so enjoy our writeup.
 
 ## WEB 
