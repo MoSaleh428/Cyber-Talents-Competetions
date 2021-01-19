@@ -1,9 +1,9 @@
 # New Year CTF 
 We are Ch4mpi0n5 team and we got the 5th place in this competition.
 Team Members:
-Abanob Medhat
-Mohammed Saleh
-Hussein EL Sayed
+- Abanob Medhat
+- Mohammed Saleh
+- Hussein EL Sayed
 this CTF competition was held on 24th Dec 2020 by Cybertalents.
 It was good competition, so enjoy our writeup.
 
